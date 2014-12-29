@@ -1,4 +1,4 @@
-module Pkg (getPackages) where
+module Pkg (getPackages, upgradeSoftware) where
 
 import System.Environment
 import System.Process
@@ -34,3 +34,19 @@ scrape :: [String] -> [String]
 scrape [] = []
 scrape (x:xs) = (scrapeOne x):(scrape xs)
     where scrapeOne = reverse . tail . dropWhile ((/=) '-') . reverse
+
+{-|Upgrade a list of packages
+  |TODO support installation mechanisms other than portmaster
+  |-}
+upgradeSoftware :: [String] -> IO ()
+upgradeSoftware (p:ps) = runUpgrade (p:ps) >> putStrLn ("Upgraded " ++ (show $ length (p:ps)) ++ " packages")
+upgradeSoftware [] = putStrLn "Nothing to upgrade in automatic mode"
+
+{-|Run upgrade commands
+  |TODO support installation mechanisms other than portmaster
+  |-}
+runUpgrade :: [String] -> IO ()
+runUpgrade (p:ps) = putStrLn ("Upgrading " ++ p  ++ ":")
+                 >> callProcess "portmaster" [p]
+                 >> runUpgrade ps
+runUpgrade [] = return ()
