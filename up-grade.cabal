@@ -9,7 +9,7 @@ version:             0.0.0.1
 
 synopsis:            Software management tool
 description:         A tool to manage upgrading of ports on a FreeBSD machine
-homepage:            http://github.com/ppenzin/up-grade/
+homepage:            http://github.com/ppenzin/up/
 license:             BSD2
 license-file:        LICENSE
 author:              Petr Penzin
