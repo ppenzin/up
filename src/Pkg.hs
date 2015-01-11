@@ -1,4 +1,4 @@
-module Pkg (getPackages, upgradeSoftware) where
+module Pkg (getPackages, portsnapFetchUpdate, upgradeSoftware) where
 
 import System.Environment
 import System.Process
@@ -50,3 +50,11 @@ runUpgrade (p:ps) = putStrLn ("Upgrading " ++ p  ++ ":")
                  >> callProcess "portmaster" [p]
                  >> runUpgrade ps
 runUpgrade [] = return ()
+
+{-|Run `portsnap fetch update'
+  |TODO enable first-time runs (fetch-extract)
+  |-}
+portsnapFetchUpdate :: IO ()
+portsnapFetchUpdate  = putStrLn ("Fetching with portsnap:")
+                 >> callProcess "portsnap" ["fetch", "update"]
+

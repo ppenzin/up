@@ -9,13 +9,18 @@ import Pkg
 main :: IO ()
 main = getArgs >>= parse >> exit
 
-parse ["update"]  = update >> exit
+parse ["fetch"]  = fetch >> exit
 parse ["status"]  = status >> exit
 parse ["upgrade"] = upgrade >> exit
+parse ["fetch", "upgrade"] = fetch >> upgrade >> exit
 parse []          = usage >> exit
 
-usage = putStrLn "TODO usage"
-update = putStrLn "TODO update"
+usage = putStrLn "Usage: up <command>"
+     >> putStrLn "The commands are:"
+     >> putStrLn "fetch\tUpdate ports tree"
+     >> putStrLn "status\tShow ports ready to be upgraded"
+     >> putStrLn "upgrade\tRun upgrade on ports that don't have entries in UPDATING"
+fetch = portsnapFetchUpdate -- TODO what about first-time update?
 status = getPackages >>= printPackages
 upgrade = getPackages >>= upgradePackages
 exit = exitWith ExitSuccess
