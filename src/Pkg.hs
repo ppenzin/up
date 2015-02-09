@@ -9,7 +9,7 @@ Portability :  non-portable (FreeBSD specific)
 Primitives to work with ports and packages
 
 -}
-module Pkg (getPackages, portsnapFetchUpdate, upgradeSoftware) where
+module Pkg (getPackages, upgradeSoftware) where
 
 import System.Environment
 import System.Process
