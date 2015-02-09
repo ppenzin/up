@@ -24,7 +24,7 @@ Executable up
   hs-source-dirs:      src
   main-is:             Main.hs
   other-modules:       
-  build-depends:       base<5, process, ports-tools
+  build-depends:       base<5, process>=1.2, ports-tools
   
 -- Test-suite test-all
 --   type:                exitcode-stdio-1.0
