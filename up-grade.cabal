@@ -1,11 +1,5 @@
 name:                up-grade
-
--- A reminder about package versioning policy that Cabal (sometimes) follows
--- http://www.haskell.org/haskellwiki/Package_versioning_policy
--- PVP summary:      +-+------- breaking API changes
---                   | | +----- non-breaking API additions
---                   | | | +--- code changes with no API change
-version:             0.0.0.1
+version:             0.0.1
 
 synopsis:            Software management tool
 description:         A tool to manage upgrading of ports on a FreeBSD machine
