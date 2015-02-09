@@ -23,7 +23,7 @@ data-files:
 Executable up
   hs-source-dirs:      src
   main-is:             Main.hs
-  other-modules:       
+  other-modules:       Pkg
   build-depends:       base<5, process>=1.2, ports-tools
   
 -- Test-suite test-all
