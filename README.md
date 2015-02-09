@@ -5,9 +5,8 @@ Software upgrader for FreeBSD, a frontend for portsnap,
 portmaster/portupgrade/makefile. Tries to be smart by only upgrading software
 that doesn't have any mentions in UPDATING.
 
-# TODO
-- Support installation mechanisms other than portmaster
-- Fetching port tree: enable first-time runs (fetch-extract)
+# TODO in future versions
+- Enable interaction with portsnap (updating ports tree)
 
 # Prerequisites
 - ghc
