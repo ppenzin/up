@@ -10,7 +10,8 @@ version:             0.0.0.1
 synopsis:            Software management tool
 description:         A tool to manage upgrading of ports on a FreeBSD machine
 homepage:            http://github.com/ppenzin/up/
-license:             BSD2
+-- BSD2 (FreeBSD) license
+license:             OtherLicense
 license-file:        LICENSE
 author:              Petr Penzin
 maintainer:          penzin-dev@gmail.com
@@ -29,7 +30,7 @@ Executable up
   hs-source-dirs:      src
   main-is:             Main.hs
   other-modules:       
-  build-depends:       base, process
+  build-depends:       base<5, process, ports-tools
   
 -- Test-suite test-all
 --   type:                exitcode-stdio-1.0

@@ -1,3 +1,14 @@
+{- |
+Module      :  $Header$
+License     :  FreeBSD
+
+Maintainer  :  penzin.dev@gmail.com
+Stability   :  experimental
+Portability :  non-portable (FreeBSD specific)
+
+Entry point for the up application
+
+-}
 module Main where
 
 import System.Environment
