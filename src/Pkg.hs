@@ -63,10 +63,3 @@ runUpgrade tool (p:ps) = putStrLn ("Upgrading " ++ p  ++ ":")
                       >> runUpgrade tool ps
 runUpgrade _ [] = return ()
 
-{-|Run `portsnap fetch update'
-  |TODO enable first-time runs (fetch-extract)
-  |-}
-portsnapFetchUpdate :: IO ()
-portsnapFetchUpdate  = putStrLn ("Fetching with portsnap:")
-                 >> callProcess "portsnap" ["fetch", "update"]
-

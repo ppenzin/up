@@ -22,21 +22,17 @@ main :: IO ()
 main = getArgs >>= parse >> exit
 
 -- |Parse command-line arguments
-parse ["fetch"]  = fetch >> exit
 parse ["status"]  = status >> exit
 parse ["upgrade"] = upgrade >> exit
-parse ["fetch", "upgrade"] = fetch >> upgrade >> exit
 parse ["help"]    = usage >> exit
 parse []          = usage >> exit
 
 -- |Display help
 usage = putStrLn "Usage: up <command>"
      >> putStrLn "The commands are:"
-     >> putStrLn "fetch\tUpdate ports tree"
      >> putStrLn "status\tShow ports ready to be upgraded"
      >> putStrLn "upgrade\tRun upgrade on ports that don't have entries in UPDATING"
--- |Update ports tree
-fetch = portsnapFetchUpdate -- TODO what about first-time update?
+     >> putStrLn "\nup relies on ports tree being up-to-date. Run portsnap to update."
 -- |Check for outdated packages
 status = getPackages >>= printPackages
 -- |Upgrade packages
