@@ -1,5 +1,5 @@
 name:                up-grade
-version:             0.0.1
+version:             0.0.2
 
 synopsis:            Software management tool
 description:         A tool to manage upgrading of ports on a FreeBSD machine
