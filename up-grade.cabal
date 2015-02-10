@@ -19,10 +19,5 @@ Executable up
   hs-source-dirs:      src
   main-is:             Main.hs
   other-modules:       Pkg
-  build-depends:       base<5, process, ports-tools
+  build-depends:       base<5, process>=1.2, ports-tools
   
--- Test-suite test-all
---   type:                exitcode-stdio-1.0
---   hs-source-dirs:      test, src
---   main-is:             TestAll.hs
---   build-depends:       base, text, aeson, yaml, bytestring, tasty, tasty-hunit, tasty-smallcheck, tasty-quickcheck
