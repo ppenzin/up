@@ -9,21 +9,16 @@ license:             OtherLicense
 license-file:        LICENSE
 author:              Petr Penzin
 maintainer:          penzin-dev@gmail.com
--- copyright:           
+copyright:           Petr Penzin
 category:            Build
 build-type:          Simple
 cabal-version:       >=1.8
 data-files:          
 
--- Library
---   hs-source-dirs:      src
---   exposed-modules:     
---   build-depends:       base
-
 Executable up
   hs-source-dirs:      src
   main-is:             Main.hs
-  other-modules:       
+  other-modules:       Pkg
   build-depends:       base<5, process, ports-tools
   
 -- Test-suite test-all
