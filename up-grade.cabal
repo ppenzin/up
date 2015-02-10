@@ -1,5 +1,5 @@
 name:                up-grade
-version:             0.0.1
+version:             1.0.0
 
 synopsis:            Software management tool
 description:         A tool to manage upgrading of ports on a FreeBSD machine
@@ -10,7 +10,7 @@ license-file:        LICENSE
 author:              Petr Penzin
 maintainer:          penzin-dev@gmail.com
 copyright:           Petr Penzin
-category:            Build
+category:            Software Management
 build-type:          Simple
 cabal-version:       >=1.8
 data-files:          
